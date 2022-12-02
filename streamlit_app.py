@@ -1,4 +1,4 @@
-#import streamlit
+import streamlit
 streamlit.title('My Moms New Healthy dinner')
 streamlit.header('breakfast')
 streamlit.text('🥣 Omega 3 n blueberry oatmeal')
@@ -35,7 +35,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
-#import snowflake.connector
+import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from fruit_load_list")
